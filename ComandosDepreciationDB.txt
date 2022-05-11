@@ -4,6 +4,8 @@ dotnet tool install --global dotnet-ef
 Crear migracion en el proyecto 
 dotnet ef migrations add -p DepreciationDBApp.Domain -o Migrations InitialCreate
 
+Actualizar migracion 
+dotnet ef database update -p DepreciationDBApp.Domain
 
 Datos para la tabla de datos 
 create database DepreciationDB
