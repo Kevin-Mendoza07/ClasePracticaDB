@@ -1,0 +1,29 @@
+Comandos para instalar la migracion 
+dotnet tool install --global dotnet-ef
+
+Crear migracion en el proyecto 
+dotnet ef migrations add -p DepreciationDBApp.Domain -o Migrations InitialCreate
+
+
+Datos para la tabla de datos 
+create database DepreciationDB
+
+use DepreciationDB
+
+create table Asset(
+	id int primary key identity (1,1),
+	name varchar (50) not null,
+	[descripcion] varchar (200) null,
+	amount decimal (9,2) not null,
+	amountResidual decimal (9,2) not null,
+	terms int not null,
+	code varchar(50) not null,
+	status varchar(50) not null,
+	isActive bit
+)
+select * from Asset
+
+
+crear la migracion de c# a sql server
+
+dotnet ef database update --project <Nombre del proyecto> 
